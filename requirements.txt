@@ -112,7 +112,7 @@ Rtree==0.9.7
 scikit-learn==1.0.2
 scipy==1.7.3
 setuptools==61.2.0
-sip==4.19.13
+sip==4.19.7
 six==1.16.0
 snowballstemmer==2.2.0
 sortedcontainers==2.4.0
