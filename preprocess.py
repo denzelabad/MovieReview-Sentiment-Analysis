@@ -7,7 +7,10 @@ Created on Fri Apr  8 12:58:06 2022
 
 import string
 import re
+from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+
+stpwrds = set(stopwords.words('english'))
 
 def remove_punc(text):
     # Replace sentence-ending punctuation with whitespace
@@ -39,6 +42,11 @@ def remove_html(text):
     text = pattern.sub(r'', text)
     return text
 
+def remove_stopwords(text):
+    # Remove common stopwords
+    text = " ".join([string for string in str(text).split() if string not in stpwrds])
+    return text
+
 def lemmatize(text):
     # Convert words to their original lemma
     text = " ".join([WordNetLemmatizer().lemmatize(word) for word in text.split()])
@@ -49,5 +57,6 @@ def clean_text(text):
     text = remove_html(text)
     text = remove_punc(text)
     text = fix_space(text)
+    text = remove_stopwords(text)
     text = lemmatize(text)
     return text
