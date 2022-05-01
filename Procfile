@@ -1,1 +1,1 @@
-web: waitress-serve --port= myapp.wsgi:application
+web: gunicorn --chdir ./IMDB_App app:app
