@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn --chdir ./IMDB_App app:app
