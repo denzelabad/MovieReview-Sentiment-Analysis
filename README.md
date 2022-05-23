@@ -12,8 +12,6 @@ There are many sites where people can write their own reviews and opinions on ne
 
 This project makes use of a combination of two datasets; a custom web-scraped dataset containing 123,549 user reviews taken from the first 100 movies in IMDB's current [Most Popular list](https://www.imdb.com/chart/moviemeter?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=470df400-70d9-4f35-bb05-8646a1195842&pf_rd_r=EPJ9NEX6DE771BWHSG8P&pf_rd_s=right-4&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_ql_2), and the famous [Kaggle IMDB Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews), which contains 50k movie reviews.
 
-The web-scraped dataset was compiled using this [custom Web Scraper script](https://github.com/denzelabad/MovieReview-Sentiment-Analysis/blob/main/IMDB_WebScrape.py)
-
 ### Method
 
 1. Collect and scrape user reviews and their associated star ratings from IMDB's [Most Popular list](https://www.imdb.com/chart/moviemeter?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=470df400-70d9-4f35-bb05-8646a1195842&pf_rd_r=EPJ9NEX6DE771BWHSG8P&pf_rd_s=right-4&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_ql_2) and compile them into a csv file. This was done in this [custom Web Scraper script](https://github.com/denzelabad/MovieReview-Sentiment-Analysis/blob/main/IMDB_WebScrape.py).
@@ -21,3 +19,8 @@ The web-scraped dataset was compiled using this [custom Web Scraper script](http
 3. Design a simple UI interface for the user application using HTML. Shown in [this HTML script](https://github.com/denzelabad/MovieReview-Sentiment-Analysis/blob/main/IMDB_App/templates/IMDB_html.html)
 4. Create the web application using Flask, add functionality that allows user input from the app to interact with the model and output the predictions. Click [here](https://github.com/denzelabad/MovieReview-Sentiment-Analysis/blob/main/IMDB_App/app.py) to see the script for the Flask app.
 5. Deploy the Flask app using Heroku.
+
+### Results
+
+The final XGBoost model achieved a 93.5% accuracy on a test dataset containing 18,326 user reviews. It's ability to distinguish between positive and negative reviews is comparable, as seen in this classification report:
+![classification_report](https://user-images.githubusercontent.com/69582949/169747807-a4086ebb-504c-43f7-89c2-e1aeecb97ecd.png)
