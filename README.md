@@ -22,5 +22,8 @@ This project makes use of a combination of two datasets; a custom web-scraped da
 
 ### Results
 
-The final XGBoost model achieved a 93.5% accuracy on a test dataset containing 18,326 user reviews. It's ability to distinguish between positive and negative reviews is comparable, as seen in this classification report:
+The final XGBoost model achieved a 93.5% accuracy on a test dataset containing 18,326 user reviews. It's ability to distinguish between positive and negative reviews is comparable, as seen in this classification report (where 0 represents negative sentiment and 1 represents positive):
+
 ![classification_report](https://user-images.githubusercontent.com/69582949/169747807-a4086ebb-504c-43f7-89c2-e1aeecb97ecd.png)
+
+You can test out the model for yourself by playing around with the final version of the [app](https://denzel-movie-sentiment-app.herokuapp.com).
