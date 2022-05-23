@@ -26,6 +26,6 @@ The final XGBoost model achieved a 93.5% accuracy on a test dataset containing 1
 
 ![classification_report](https://user-images.githubusercontent.com/69582949/169747807-a4086ebb-504c-43f7-89c2-e1aeecb97ecd.png)
 
-The final application works quite well, however does have some limitations. Since it only predicts a binary outcome, any movie review inputs that have a neutral sentiment will not be classified correctly. Additionally, since the reviews used in training were taken from IMDB, they are all mostly decently-sized reviews and so any inputs in the app that have too few words might not be classified correctly.
+The final application works quite well, however does have some limitations. Since it only predicts a binary outcome, any movie review inputs that have a neutral sentiment will not be classified correctly. Additionally, since the reviews used in training were taken from IMDB, they are mostly somewhat lengthy reviews and so any inputs in the app that have too few words might not be classified correctly either.
 
 You can test out the model for yourself by playing around with the final version of the app [here](https://denzel-movie-sentiment-app.herokuapp.com).
